@@ -1,0 +1,275 @@
+<div class="contenido">
+    <!-- button new Product -->
+    <hr>
+    <p>Marcas</p>    
+    <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_marca">Agregar</button>
+    <br><br>
+    
+    <table class="table " border="1px">
+        <thead>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Editar</th>
+                <th>Desactivar</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre 1</td>
+                <td>Estado</td>
+                <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
+                <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>
+            </tr>
+
+            <tr>
+                    <td>Nombre 2</td>
+                    <td>Estado</td>
+                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
+                    <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>
+            </tr>
+            <tr>
+                    <td>Nombre 3</td>
+                    <td>Estado</td>
+                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
+                    <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>    
+            </tr>
+
+        </tbody>
+        
+    </table>
+
+
+    <hr>
+    <p>categorias</p>    
+    <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_categoria">Agregar</button>
+    <br><br>
+    
+    <table class="table " border="1px">
+        <thead>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Editar</th>
+                <th>Desactivar</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre 1</td>
+                <td>Estado</td>
+                <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
+                <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
+            </tr>
+
+            <tr>
+                    <td>Nombre</td>
+                    <td>Estado</td>
+                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
+                    <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
+            </tr>
+            <tr>
+                    <td>Nombre</td>
+                    <td>Estado</td>
+                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
+                    <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
+            </tr>
+
+        </tbody>
+        
+    </table>
+        
+
+
+
+</div>
+ <br>
+ <br>       
+        
+<!-- modal from Marca -->        
+<!-- modal new Marca -->
+<div class="modal fade add_marca" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">  
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <div class="container">
+                    <div class="input-value">
+                        <label for="">Nombre</label>
+                        <input type="text" placeholder="nombre de la marca">    
+                    </div>
+                    <div class="input-value">
+                            <label for="">Proveedor</label>
+                            <select name="" id="">
+                                <option value="">seleccionar uno</option>
+                                <option value="">Proveedor 1</option>
+                                <option value="">proveedor 2</option>
+                                <option value="">proveedor 3</option>
+                            </select>    
+                    </div>
+                    <div class="button-libreria">
+                        <input type="button" class="btn btn-primary" value="agregar">
+                    </div>   
+                </div>
+
+                </div>
+        
+        </div>
+    </div>
+</div>
+      
+<!-- modal Update marca -->
+<div class="modal fade update_marca" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            
+                    <div class="modal-body">
+                            <div class="container">
+                                    <div class="input-value">
+                                        <label for="">Nombre</label>
+                                        <input type="text" placeholder="nombre de la marca">    
+                                    </div>
+                                    <div class="input-value">
+                                            <label for="">Proveedor</label>
+                                            <select name="" id="">
+                                                <option value="">seleccionar uno</option>
+                                                <option value="">Proveedor 1</option>
+                                                <option value="">proveedor 2</option>
+                                                <option value="">proveedor 3</option>
+                                            </select>    
+                                    </div>
+                                    <div class="button-libreria">
+                                        <input type="button" class="btn btn-primary" value="agregar">
+                                    </div>   
+                            </div>
+
+                    </div>
+            
+            </div>
+        </div>
+</div>
+
+<!-- modal dasactivar marca -->
+<div class="modal fade desact_marca" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Desactivar Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            
+                    <div class="modal-body">
+                        <div class="container">
+                            <div>
+                                <label for="">id</label>
+                                <input type="text" value="id">
+                            </div>
+                            <div>
+                                <input type="button" class="btn btn-danger" value="desactivar">    
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+</div>
+
+
+
+
+<!-- Categoria -->
+<!-- modal new Categoria -->
+<div class="modal fade add_categoria" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nueva Categoria</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div class="input-value">
+                            <label for="">Nombre</label>
+                            <input type="text" placeholder="nombre de la marca">    
+                        </div>
+                        <div class="input-value">
+                                <label for="">Proveedor</label>
+                        </div>
+                        <div class="button-libreria">
+                            <input type="button" class="btn btn-primary" value="agregar">
+                        </div>   
+                    </div>
+    
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+          
+    <!-- modal Update Categoria -->
+    <div class="modal fade update_categoria" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">  
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modificar Categoria</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                
+                        <div class="modal-body">
+                                <div class="container">
+                                        <div class="input-value">
+                                            <label for="">Nombre</label>
+                                            <input type="text" placeholder="nombre de la marca">    
+                                        </div>
+
+                                        <div class="button-libreria">
+                                            <input type="button" class="btn btn-primary" value="agregar">
+                                        </div>   
+                                </div>
+    
+                        </div>
+                
+                </div>
+            </div>
+    </div>
+    
+    <!-- modal dasactivar Categoria -->
+    <div class="modal fade desact_categoria" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">  
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Desactivar Categoria</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <div class="container">
+                                <div>
+                                    <label for="">id</label>
+                                    <input type="text" value="id">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn btn-danger" value="desactivar">    
+                                </div>
+                            </div>
+                        </div>
+                
+                </div>
+            </div>
+    </div>
+    

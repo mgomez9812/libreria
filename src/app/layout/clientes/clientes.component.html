@@ -1,0 +1,177 @@
+<div class="contenido">
+        <!-- button new Product -->
+        <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_cliente">Agregar</button>
+        <br><br>
+        
+        <table class="table " border="1px">
+            <thead>
+                    <th>nombre</th>
+                    <th>apellidos</th>
+                    <th>telefono</th>
+                    <th>direccion</th>
+                    <th>nit</th>
+                    <th>actualizar</th>
+                    <th>desactivar</th>
+            </thead>
+            <tbody>
+                <td>Nombres</td>
+                <td>apellids</td>
+                <td>telefono</td>
+                <td>direccion</td>
+                <td>nit</td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_cliente">actualizar</button></td>
+                <td><button class="btn btn-danger" data-toggle="modal" data-target=".desact_cliente" >Desactivar</button> </td>
+            </tbody>
+            
+        </table>
+        </div>
+        
+        
+        
+        <!-- modal new cliente -->
+        <div class="modal fade add_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        
+        <div class="modal-dialog modal-lg">  
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+        
+                <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">Primer Nombre</label>
+                            <input type="text">
+                        </div>
+                        
+                        <div>
+                                <label for="">Segundo Nombre</label>
+                                <input type="text">
+                        </div>
+
+                        <div>
+                                <label for="">Primer Apellido</label>
+                                <input type="text">
+                        </div>
+
+                        <div>
+                                <label for="">Segundo Apellido</label>
+                                <input type="text">
+                        </div>
+
+                        <div>
+                                <label for="">Telefono</label>
+                                <input type="text">
+                        </div>
+                        
+                        <div>
+                                <label for="">Direccion</label>
+                                <input type="text">
+                        </div>
+
+                        <div>
+                                <label for="">Nit</label>
+                                <input type="text">
+                        </div>
+
+                        <div>
+                            <input type="button" class="btn btn-primary" value="Agregar Cliente">
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        </div>
+        </div>
+
+<!-- modal Update cliente -->
+<div class="modal fade update_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+     
+                <div class="modal-dialog modal-lg">  
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Actualizar Cliente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <div class="container">
+                                <div>
+                                    <label for="">Primer Nombre</label>
+                                    <input type="text">
+                                </div>
+                                
+                                <div>
+                                        <label for="">Segundo Nombre</label>
+                                        <input type="text">
+                                </div>
+        
+                                <div>
+                                        <label for="">Primer Apellido</label>
+                                        <input type="text">
+                                </div>
+        
+                                <div>
+                                        <label for="">Segundo Apellido</label>
+                                        <input type="text">
+                                </div>
+        
+                                <div>
+                                        <label for="">Telefono</label>
+                                        <input type="text">
+                                </div>
+                                
+                                <div>
+                                        <label for="">Direccion</label>
+                                        <input type="text">
+                                </div>
+        
+                                <div>
+                                        <label for="">Nit</label>
+                                        <input type="text">
+                                </div>
+        
+                                <div>
+                                    <input type="button" class="btn btn-primary" value="Agregar Cliente">
+                                </div>
+                            </div>
+                        </div>
+                
+                </div>
+                </div>
+</div>
+
+
+<!-- Desactivar cliente -->
+<div class="modal fade desact_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+     
+        <div class="modal-dialog modal-lg">  
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Desactivar Cliente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+        
+                <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">ID Cliente</label>
+                            <input type="text">
+                        </div>
+
+                        <div>
+                            <input type="button" class="btn btn-Danger" value="Desactivar">
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        </div>
+</div>

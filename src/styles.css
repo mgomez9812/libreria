@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.contenido{
+    margin-left: 250px;
+    position: relative;
+  }
+  
+/*para el boton agregar mas */
+.button_add{
+  margin-top: 15px;
+}
+
+
+
+
+  /* set element styles to fit tablet and higher(desktop) */
+  @media screen and (min-width: 200px) {
+    .contenido{
+      margin-left: 50px;
+    }
+  }
+  
+  /* set element styles to fit tablet and higher(desktop) */
+  @media screen and (min-width: 400px) {
+    .contenido{
+      margin-left: 50px;
+    }
+  }
+  /* set element styles to fit tablet and higher(desktop) */
+  @media screen and (min-width: 600px) {
+    .contenido{
+      margin-left: 75px;
+    }
+  }
+  /* set element styles for desktop */
+  @media screen and (min-width: 800px) {
+    .contenido{
+      margin-left: 220px;
+    }
+  }
+  

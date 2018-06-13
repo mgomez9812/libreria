@@ -1,0 +1,400 @@
+<div class="contenido">
+        <!-- button new represent -->
+        <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_representate">nuevo representante</button>
+        <br><br>
+        
+        <table class="table " border="1px">
+            <thead>
+                    <th>Nombre Representante</th>
+                    <th>Apellidos Representante</th>
+                    <th>Telefono</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+            </thead>
+            <tbody>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Telefono</td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_representate">actualizar</button> </td>
+                <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_representante">eliminar</button></td>
+            </tbody>
+            
+        </table>
+
+        <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_proveedor">Agregar Proveedor</button>
+        <br><br>
+        <table class="table " border="1px">
+                <thead>
+                        <th>nombre_representante</th>
+                        <th>Nombre_proveedor</th>
+                        <th>NIT_Proveedor</th>
+                        <th>telefono</th>
+                        <th>vermas</th>
+                        <th>Actualizar</th>
+                        <th>Eliminar</th>
+                </thead>
+                <tbody>
+                    <td>nombre_representante</td>
+                    <td>Empresa_proveedor</td>
+                    <td>Nit</td>
+                    <td>telefono</td>
+                    <td><button class="btn btn-info">ver mas</button></td>
+                    <td><button class="btn btn-success" data-toggle="modal" data-target=".update_proveedor">actualizar representante</button> </td>
+                    <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_proveedor">eliminar proveedor</button></td>
+                </tbody>
+                
+        </table>
+        </div>
+        
+<!-- modal new representante -->
+<div class="modal fade add_representate" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+    <div class="modal-dialog modal-lg">  
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo representante</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <div class="container">
+                    <div>
+                        <label for="">primer nombre</label>
+                        <input type="text">
+                    </div>
+
+                    <div>
+                        <label for="">Segundo nombre</label>
+                          <input type="text">
+                    </div>
+
+                    <div>
+                        <label for="">primer Apellido</label>
+                        <input type="text">
+                    </div>
+
+                    <div>
+                        <label for="">Segundo Apellido</label>
+                        <input type="text">
+                    </div>
+
+                    <div>
+                        <label for="">Telefono</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+                </div>
+        
+        </div>
+    </div>
+</div>
+
+<!--Update Representante-->
+<div class="modal fade update_representante" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">primer nombre</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Segundo nombre</label>
+                              <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">primer Apellido</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Segundo Apellido</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Telefono</label>
+                            <input type="text">
+                        </div>
+    
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+    
+
+<!--Delete Representante-->
+<div class="modal fade delete_representante" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">primer nombre</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <button class="btn btn-danger">
+                                eliminar
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+
+<!--para agregar el proveedor-->
+<div class="modal fade add_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">nombre</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">NIT</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <label for="">Direccion</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">representante</label>
+                            <select name="" id="">
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Descripcion</label>
+                            <input type="text">
+                        </div>
+    
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+    </div>  
+
+
+
+<!-- modal Update representante -->
+<div class="modal fade update_representate" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">primer nombre</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Segundo nombre</label>
+                              <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">primer Apellido</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Segundo Apellido</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">Telefono</label>
+                            <input type="text">
+                        </div>
+    
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!--para agregar el proveedor-->
+    <div class="modal fade add_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+            <div class="modal-dialog modal-lg">  
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <div class="container">
+                            <div>
+                                <label for="">nombre</label>
+                                <input type="text">
+                            </div>
+        
+                            <div>
+                                <label for="">NIT</label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div>
+                                <label for="">Direccion</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">representante</label>
+                                <select name="" id="">
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Descripcion</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">
+                                    agregar
+                                </button>
+                            </div>
+        
+                        </div>
+                        </div>
+                
+                </div>
+            </div>
+</div>
+
+<!--update representante-->
+<div class="modal fade update_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Proveedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">nombre</label>
+                            <input type="text">
+                        </div>
+    
+                        <div>
+                            <label for="">NIT</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <label for="">Direccion</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">representante</label>
+                            <select name="" id="">
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                                <option value="">seleccione</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Descripcion</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <button class="btn btn-success">
+                                Actualizar
+                            </button>
+                        </div>
+    
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+</div>
+
+
+<!--Eliminar proveedor-->
+<div class="modal fade delete_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
+        <div class="modal-dialog modal-lg">  
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Eliminar Proveedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="container">
+                        <div>
+                            <label for="">nombre</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <button class="btn btn-danger">
+                                eliminar
+                            </button>
+                        </div>
+    
+      
+    
+                    </div>
+                    </div>
+            
+            </div>
+        </div>
+</div>

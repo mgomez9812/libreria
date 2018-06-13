@@ -1,0 +1,223 @@
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #999999; }
+input:-moz-placeholder { color: #999999; }
+input::-moz-placeholder { color: #999999; }
+input:-ms-input-placeholder { color: #999999; }
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image:url('/assets/fondo_login.jpg');
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.login100-form {  
+  width: 400px;
+}
+
+.login100-form-title {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  width: 100%;
+  display: block;
+  padding-bottom: 50px;
+}
+
+.img_form{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+
+}
+
+/*-------------------------*/
+.title-one{
+    text-align: center;
+}
+
+
+/*---------------------------------------------*/
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+
+.input1001 {
+    
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+    padding: 0 30px 0 68px;
+    background-color: transparent;
+    
+  }
+
+.input1001::-webkit-input-placeholder{color: #000;}
+
+/*------------------------------------------------------------------
+[ Focus ]*/
+.symbol-input100 {
+  font-size: 15px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: black;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn  {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  padding-top: 4px;
+}
+
+.login100-form-btn {
+  margin-top: 10px;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background: #57b846;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background: #388E3C;
+}
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+@media (max-width: 992px) {
+  .wrap-login100 {
+  padding: 50px 70px 50px 70px;
+  }
+
+  .login100-pic {
+    width: 35%;
+  }
+
+  .login100-form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap-login100 {
+		/*
+		padding: top,right,top,left;
+		 */
+    padding: 50px 50px 33px 100px;
+  }
+
+  .login100-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding: 50px 15px 33px 15px;
+  }
+}

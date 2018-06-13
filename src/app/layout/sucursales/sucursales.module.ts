@@ -1,0 +1,19 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { SucursalesRoutingModule } from './sucursales-routing.module';
+import { SucursalesComponent } from './sucursales.component';
+
+
+@NgModule({
+  imports: [
+    CommonModule,
+    SucursalesRoutingModule,
+
+  ],
+  declarations: [
+    SucursalesComponent
+  ]
+})
+
+export class SucursalesModule {}

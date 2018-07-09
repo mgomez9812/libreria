@@ -21,10 +21,12 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/font-awesome/css/font-awesome.css",
+        "assets/DataTables/datatables.css",
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "assets/DataTables/datatables.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

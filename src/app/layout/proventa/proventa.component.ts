@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+declare var $;
+
 @Component({
   selector: 'app-proventa',
   templateUrl: './proventa.component.html',
@@ -7,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProventaComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    $(document).ready(function() {
+      $('#example').DataTable( {
+      } );
+  } );
+
+
+   }
 
   ngOnInit() {
   }

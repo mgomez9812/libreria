@@ -10,10 +10,13 @@ declare var $;
 export class DashboardComponent implements OnInit {
 
   constructor() {
-    $('#exampleModal').on('shown.bs.modal', function () {
-      $('#myInput').focus()
-    })
+
+    $(document).ready(function() {
+      $('#example').DataTable( {
+      } );
+  } );
    }
+
 
   ngOnInit() {
   }

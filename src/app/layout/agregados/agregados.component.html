@@ -1,79 +1,60 @@
 <div class="contenido">
+
+        <p class="title1">Marca</p>
+        <hr>
     <!-- button new Product -->
-    <hr>
-    <p>Marcas</p>    
-    <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_marca">Agregar</button>
-    <br><br>
-    
-    <table class="table " border="1px">
+    <div class="primero">
+        <button class="btn-material primary button_add btn-add-p" data-toggle="modal" data-target=".add_marca"><span>agregar</span></button>
+    </div>
+
+    <table id="Marca" class="mdl-data-table compact hover row-border" style="width:100%">
         <thead>
+            <tr>
                 <th>Nombre</th>
                 <th>Estado</th>
                 <th>Editar</th>
-                <th>Desactivar</th>
+                <th>desactivar</th>
+            </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Nombre 1</td>
-                <td>Estado</td>
-                <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
-                <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>
+                <td>001</td>
+                <td>Activo</td>
+                <td><button class="btn-material btn-table" data-toggle="modal" data-target=".update_marca"><span><i class="fa fa-edit"></i></span> </button></td>
+                <td><button class="btn-material red btn-table"><span><i class="fa fa-trash"></i></span></button></td>
             </tr>
 
-            <tr>
-                    <td>Nombre 2</td>
-                    <td>Estado</td>
-                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
-                    <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>
-            </tr>
-            <tr>
-                    <td>Nombre 3</td>
-                    <td>Estado</td>
-                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_marca">Agregar</button></td>
-                    <td><button class="btn btn-danger button_add" data-toggle="modal" data-target=".desact_marca">Desactivar</button></td>    
-            </tr>
 
         </tbody>
-        
     </table>
 
 
-    <hr>
-    <p>categorias</p>    
-    <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_categoria">Agregar</button>
+
+    <p class="title">Categorias</p>
+    <hr>    
+    <button class="btn-material primary primero" data-toggle="modal" data-target=".add_categoria"><span>Agregar</span></button>
     <br><br>
     
-    <table class="table " border="1px">
-        <thead>
-                <th>Nombre</th>
-                <th>Estado</th>
-                <th>Editar</th>
-                <th>Desactivar</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Nombre 1</td>
-                <td>Estado</td>
-                <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
-                <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
-            </tr>
-
-            <tr>
-                    <td>Nombre</td>
-                    <td>Estado</td>
-                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
-                    <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
-            </tr>
-            <tr>
-                    <td>Nombre</td>
-                    <td>Estado</td>
-                    <td><button class="btn btn-info button_add" data-toggle="modal" data-target=".update_categoria">editar</button></td>
-                    <td><button class="btn btn-danger button_erase" data-toggle="modal" data-target=".desact_categoria">Eliminar</button></td>
-            </tr>
-
-        </tbody>
-        
-    </table>
+    <table id="Categoria" class="mdl-data-table compact hover row-border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Editar</th>
+                    <th>desactivar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Activo</td>
+                    <td><button class="btn-material btn-table" data-toggle="modal" data-target=".update_categoria"><span><i class="fa fa-edit"></i></span> </button></td>
+                    <td><button class="btn-material red btn-table"><span><i class="fa fa-trash"></i></span></button></td>
+                </tr>
+    
+    
+            </tbody>
+        </table>
         
 
 
@@ -94,27 +75,44 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <div class="container">
-                    <div class="input-value">
-                        <label for="">Nombre</label>
-                        <input type="text" placeholder="nombre de la marca">    
+                    <br>
+                <div class="container col-md-12">
+                    <div class="group">      
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>nombre</label>
                     </div>
-                    <div class="input-value">
-                            <label for="">Proveedor</label>
-                            <select name="" id="">
-                                <option value="">seleccionar uno</option>
-                                <option value="">Proveedor 1</option>
-                                <option value="">proveedor 2</option>
-                                <option value="">proveedor 3</option>
-                            </select>    
-                    </div>
-                    <div class="button-libreria">
-                        <input type="button" class="btn btn-primary" value="agregar">
-                    </div>   
+
+<!--Select with pure css-->
+                <div class="select">
+					<select class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="1">Activo</option>
+						<option value="2">No Activo</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Estado</label>
+				</div>
+
+
+                        <button class=" btn-material primary">
+                            <span>
+                                    agregar
+                            </span>
+
+                        </button>
+                        <button class="btn-material red">
+                            <span>
+                                    cancelar
+                            </span>
+                            
+                        </button>
+                    
                 </div>
 
                 </div>
-        
         </div>
     </div>
 </div>
@@ -132,22 +130,42 @@
             
                     <div class="modal-body">
                             <div class="container">
-                                    <div class="input-value">
-                                        <label for="">Nombre</label>
-                                        <input type="text" placeholder="nombre de la marca">    
-                                    </div>
-                                    <div class="input-value">
-                                            <label for="">Proveedor</label>
-                                            <select name="" id="">
-                                                <option value="">seleccionar uno</option>
-                                                <option value="">Proveedor 1</option>
-                                                <option value="">proveedor 2</option>
-                                                <option value="">proveedor 3</option>
-                                            </select>    
-                                    </div>
-                                    <div class="button-libreria">
-                                        <input type="button" class="btn btn-primary" value="agregar">
-                                    </div>   
+                                    
+                                <div class="container col-md-12">
+                                    
+                                    <div class="group">      
+                                            <input type="text" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>nombre</label>
+                                        </div>
+<!--Select with pure css-->
+                            <div class="select">
+                                <select class="select-text" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="1">Activo</option>
+                                    <option value="2">No Activo</option>
+                                </select>
+                                <span class="select-highlight"></span>
+                                <span class="select-bar"></span>
+                                <label class="select-label">Estado</label>
+                            </div>
+
+
+                        <button class=" btn-material primary">
+                                <span>
+                                        agregar
+                                </span>
+    
+                            </button>
+                            <button class="btn-material red">
+                                <span>
+                                        cancelar
+                                </span>
+                                
+                            </button>
+                            </div>
+
                             </div>
 
                     </div>
@@ -199,16 +217,40 @@
                     </div>
                     <div class="modal-body">
                     <div class="container">
-                        <div class="input-value">
-                            <label for="">Nombre</label>
-                            <input type="text" placeholder="nombre de la marca">    
-                        </div>
-                        <div class="input-value">
-                                <label for="">Proveedor</label>
-                        </div>
-                        <div class="button-libreria">
-                            <input type="button" class="btn btn-primary" value="agregar">
-                        </div>   
+                            <div class="container col-md-12">
+                                    
+                                    <div class="group">      
+                                            <input type="text" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>nombre</label>
+                                        </div>
+<!--Select with pure css-->
+                            <div class="select">
+                                <select class="select-text" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="1">Activo</option>
+                                    <option value="2">No Activo</option>
+                                </select>
+                                <span class="select-highlight"></span>
+                                <span class="select-bar"></span>
+                                <label class="select-label">Estado</label>
+                            </div>
+
+
+                        <button class=" btn-material primary">
+                                <span>
+                                        agregar
+                                </span>
+    
+                            </button>
+                            <button class="btn-material red">
+                                <span>
+                                        cancelar
+                                </span>
+                                
+                            </button>
+                            </div>   
                     </div>
     
                     </div>
@@ -230,13 +272,39 @@
                 
                         <div class="modal-body">
                                 <div class="container">
-                                        <div class="input-value">
-                                            <label for="">Nombre</label>
-                                            <input type="text" placeholder="nombre de la marca">    
+                                        <div class="container col-md-12">
+                                    
+                                                <div class="group">      
+                                                        <input type="text" required>
+                                                        <span class="highlight"></span>
+                                                        <span class="bar"></span>
+                                                        <label>nombre</label>
+                                                    </div>
+            <!--Select with pure css-->
+                                        <div class="select">
+                                            <select class="select-text" required>
+                                                <option value="" disabled selected></option>
+                                                <option value="1">Activo</option>
+                                                <option value="2">No Activo</option>
+                                            </select>
+                                            <span class="select-highlight"></span>
+                                            <span class="select-bar"></span>
+                                            <label class="select-label">Estado</label>
                                         </div>
-
-                                        <div class="button-libreria">
-                                            <input type="button" class="btn btn-primary" value="agregar">
+            
+            
+                                    <button class=" btn-material primary">
+                                            <span>
+                                                    agregar
+                                            </span>
+                
+                                        </button>
+                                        <button class="btn-material red">
+                                            <span>
+                                                    cancelar
+                                            </span>
+                                            
+                                        </button>
                                         </div>   
                                 </div>
     

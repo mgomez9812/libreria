@@ -1,0 +1,220 @@
+.container-full{
+    height: 100vh;
+    background: white;
+    margin: 0 5%;
+}
+
+
+/*para el form*/
+.form1{
+
+    background: rgba(248, 248, 248, 0.918);
+    border-radius: 25px;
+    opacity: 0.89;
+  
+    /*sombra css*/
+    -webkit-box-shadow: 7px 7px 19px -2px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 7px 19px -2px rgba(0,0,0,0.46);
+    box-shadow: 7px 7px 19px -2px rgba(0,0,0,0.46);
+    margin-top: 20px;
+
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+@media (max-width: 992px) {
+    .container-full {
+    padding: 50px 70px 50px 70px;
+    }
+  
+
+  
+    .form1 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form1 {
+      padding: 50px 50px 33px 100px;
+    }
+  
+    .login100-form {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container-full{
+        height: 120vh;
+    }
+    .form1 {
+      padding: 50px 15px 33px 15px;
+    }
+  }
+
+/*para input nombre*/
+/* form starting stylings ------------------------------- */
+    .group 			  {
+    margin-top: 40px;
+    text-align: center;
+    position:relative; 
+    }
+
+  input 				{
+    font-size:18px;
+    background: none;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label{
+    color:#000; 
+    font-size:1.2em;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:40%;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:1.2empx;
+    color:#000;
+    text-anchor: middle;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar {
+     position:relative; 
+     display:block; 
+     width:100%; 
+    }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+
+
+  /*para navbar*/
+  .navbar1{
+        background-color: #000;
+        height:40px ;
+        position: relative;
+        margin-top: 0px;
+  }
+
+  .navbar1 ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+  }
+
+  li  {
+      display: inline;
+    float: right;
+  }
+
+  .navbar1 ul li a{
+      display: block;
+      padding: 9px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: backgroud-color .3s;
+  }
+
+  .close-sesion{
+      background: #ab000d;
+  }
+
+  .close-sesion:hover{
+      background: #e53935;
+  }
+
+  .user{
+      background: #00C853;
+  }
+  .user:hover{
+    background: #27ae60;
+}
+
+
+/*para centrar el button*/
+.btn-center{
+    margin-top: -15px;
+    left: 40%;
+}
+
+
+/*para label total a pagar*/
+.total_pagar{
+    margin-top: -20px;
+}

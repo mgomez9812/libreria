@@ -21,7 +21,7 @@
                 <td>001</td>
                 <td>Activo</td>
                 <td><button class="btn-material btn-table" data-toggle="modal" data-target=".update_marca"><span><i class="fa fa-edit"></i></span> </button></td>
-                <td><button class="btn-material red btn-table"><span><i class="fa fa-trash"></i></span></button></td>
+                <td><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_marca"><span><i class="fa fa-trash"></i></span></button></td>
             </tr>
 
 
@@ -49,7 +49,7 @@
                     <td>001</td>
                     <td>Activo</td>
                     <td><button class="btn-material btn-table" data-toggle="modal" data-target=".update_categoria"><span><i class="fa fa-edit"></i></span> </button></td>
-                    <td><button class="btn-material red btn-table"><span><i class="fa fa-trash"></i></span></button></td>
+                    <td><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_categoria"><span><i class="fa fa-trash"></i></span></button></td>
                 </tr>
     
     
@@ -69,7 +69,7 @@
     <div class="modal-dialog modal-lg">  
         <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Nueva Marca</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -78,7 +78,7 @@
                     <br>
                 <div class="container col-md-12">
                     <div class="group">      
-                        <input type="text" required>
+                        <input type="text" required #nombre>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>nombre</label>
@@ -86,7 +86,7 @@
 
 <!--Select with pure css-->
                 <div class="select">
-					<select class="select-text" required>
+					<select class="select-text" required #select>
 						<option value="" disabled selected></option>
 						<option value="1">Activo</option>
 						<option value="2">No Activo</option>
@@ -97,13 +97,13 @@
 				</div>
 
 
-                        <button class=" btn-material primary">
+                        <button class=" btn-material primary" (click)='add_marca(nombre.value,select.value)'>
                             <span>
                                     agregar
                             </span>
 
                         </button>
-                        <button class="btn-material red">
+                        <button class="btn-material red" data-dismiss="modal">
                             <span>
                                     cancelar
                             </span>
@@ -122,7 +122,7 @@
         <div class="modal-dialog modal-lg">  
             <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modificar Producto</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar Marca</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -134,14 +134,14 @@
                                 <div class="container col-md-12">
                                     
                                     <div class="group">      
-                                            <input type="text" required>
+                                            <input type="text" required #nombre>
                                             <span class="highlight"></span>
                                             <span class="bar"></span>
                                             <label>nombre</label>
-                                        </div>
+                                    </div>
 <!--Select with pure css-->
                             <div class="select">
-                                <select class="select-text" required>
+                                <select class="select-text" required #estado>
                                     <option value="" disabled selected></option>
                                     <option value="1">Activo</option>
                                     <option value="2">No Activo</option>
@@ -152,13 +152,13 @@
                             </div>
 
 
-                        <button class=" btn-material primary">
+                        <button class=" btn-material primary" (click)='update_marca(nombre.value,estado.value)' >
                                 <span>
                                         agregar
                                 </span>
     
                             </button>
-                            <button class="btn-material red">
+                            <button class="btn-material red" data-dismiss="modal">
                                 <span>
                                         cancelar
                                 </span>
@@ -187,12 +187,18 @@
             
                     <div class="modal-body">
                         <div class="container">
+                            <p>desea eliminar esta marca</p>
+                            <p>marca: nombre_marca</p>
                             <div>
-                                <label for="">id</label>
-                                <input type="text" value="id">
-                            </div>
-                            <div>
-                                <input type="button" class="btn btn-danger" value="desactivar">    
+                                <button class="btn-material primary" (click)="delete_marca()">
+                                    <span>
+                                        desactivar
+                                    </span>
+                                </button>
+
+                                <button class="btn-material red" data-dismiss="modal">
+                                    <span>cancelar</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -220,14 +226,14 @@
                             <div class="container col-md-12">
                                     
                                     <div class="group">      
-                                            <input type="text" required>
+                                            <input type="text" required #nombre>
                                             <span class="highlight"></span>
                                             <span class="bar"></span>
                                             <label>nombre</label>
                                         </div>
 <!--Select with pure css-->
                             <div class="select">
-                                <select class="select-text" required>
+                                <select class="select-text" required #estado>
                                     <option value="" disabled selected></option>
                                     <option value="1">Activo</option>
                                     <option value="2">No Activo</option>
@@ -238,13 +244,13 @@
                             </div>
 
 
-                        <button class=" btn-material primary">
+                        <button class=" btn-material primary" (click)="create_categoria(nombre.value,estado.value)">
                                 <span>
                                         agregar
                                 </span>
     
                             </button>
-                            <button class="btn-material red">
+                            <button class="btn-material red" data-dismiss="modal">
                                 <span>
                                         cancelar
                                 </span>
@@ -275,14 +281,14 @@
                                         <div class="container col-md-12">
                                     
                                                 <div class="group">      
-                                                        <input type="text" required>
+                                                        <input type="text" required #nombre>
                                                         <span class="highlight"></span>
                                                         <span class="bar"></span>
                                                         <label>nombre</label>
                                                     </div>
             <!--Select with pure css-->
                                         <div class="select">
-                                            <select class="select-text" required>
+                                            <select class="select-text" required #estado>
                                                 <option value="" disabled selected></option>
                                                 <option value="1">Activo</option>
                                                 <option value="2">No Activo</option>
@@ -293,13 +299,13 @@
                                         </div>
             
             
-                                    <button class=" btn-material primary">
+                                    <button class=" btn-material primary" (click)="update_categoria(nombre.value, estado.value)">
                                             <span>
                                                     agregar
                                             </span>
                 
                                         </button>
-                                        <button class="btn-material red">
+                                        <button class="btn-material red" data-dismiss="modal">
                                             <span>
                                                     cancelar
                                             </span>
@@ -327,13 +333,18 @@
                 
                         <div class="modal-body">
                             <div class="container">
-                                <div>
-                                    <label for="">id</label>
-                                    <input type="text" value="id">
-                                </div>
-                                <div>
-                                    <input type="button" class="btn btn-danger" value="desactivar">    
-                                </div>
+                                <p>desea elimiar esta categoria </p>
+                                <p>categoria: nombre</p>
+
+                                <button class="btn-material primary" (click)="delete_categoria()">
+                                    <span>
+                                        eliminar
+                                    </span>
+                                </button>
+
+                                <button class="btn-material red" data-dismiss="modal">
+                                    <span>cancelar</span>
+                                </button>
                             </div>
                         </div>
                 

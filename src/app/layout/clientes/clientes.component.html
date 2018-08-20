@@ -1,31 +1,39 @@
 <div class="contenido">
         <!-- button new Product -->
-        <button class="btn btn-primary button_add" data-toggle="modal" data-target=".add_cliente">Agregar</button>
-        <br><br>
-        
-        <table class="table " border="1px">
+        <button class="btn-material primary button_add" data-toggle="modal" data-target=".add_cliente"><span>Agregar</span></button>
+
+        <table id="load_client" class="mdl-data-table compact hover row-border" style="width:100%">
             <thead>
-                    <th>nombre</th>
-                    <th>apellidos</th>
-                    <th>telefono</th>
-                    <th>direccion</th>
-                    <th>nit</th>
-                    <th>actualizar</th>
-                    <th>desactivar</th>
+                <tr>
+                    <th>nombres</th>
+                    <th>Apellidos</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>NIT</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
             </thead>
             <tbody>
-                <td>Nombres</td>
-                <td>apellids</td>
-                <td>telefono</td>
-                <td>direccion</td>
-                <td>nit</td>
-                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_cliente">actualizar</button></td>
-                <td><button class="btn btn-danger" data-toggle="modal" data-target=".desact_cliente" >Desactivar</button> </td>
+                <tr>
+                    <td>Nombres</td>
+                    <td>Apellidos</td>
+                    <td>Telefono</td>
+                    <td>Direccion</td>
+                    <td>NIT</td>
+                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
+                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
+                </tr>
+    
+    
             </tbody>
-            
         </table>
+
         </div>
         
+
+        
+
         
         
         <!-- modal new cliente -->
@@ -41,45 +49,74 @@
                 </div>
         
                 <div class="modal-body">
+                    <br>
                     <div class="container">
-                        <div>
-                            <label for="">Primer Nombre</label>
-                            <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Primer Nombre</label>
                         </div>
+    
                         
-                        <div>
-                                <label for="">Segundo Nombre</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Snombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Segundo Nombre</label>
                         </div>
+    
 
-                        <div>
-                                <label for="">Primer Apellido</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Papellido>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Primer Apellido</label>
                         </div>
+    
 
-                        <div>
-                                <label for="">Segundo Apellido</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Sapellido>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Segundo Apellido</label>
                         </div>
+    
 
-                        <div>
-                                <label for="">Telefono</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="number" required #Telefono>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Telefono</label>
                         </div>
+    
                         
-                        <div>
-                                <label for="">Direccion</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Direccion>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Direccion</label>
                         </div>
+    
 
-                        <div>
-                                <label for="">Nit</label>
-                                <input type="text">
+                        <div class="group">      
+                            <input type="text" required #Nit>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>NIT</label>
                         </div>
+    
+                        <button class="btn-material primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
+                            <span>
+                                Agregar
+                            </span>
+                        </button>
+                        <button class="btn-material red" data-dismiss="modal" >
+                            <span>
+                                cancelar
+                            </span>
+                        </button>
 
-                        <div>
-                            <input type="button" class="btn btn-primary" value="Agregar Cliente">
-                        </div>
                     </div>
                 </div>
         
@@ -88,7 +125,7 @@
         </div>
 
 <!-- modal Update cliente -->
-<div class="modal fade update_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade update_client" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
      
                 <div class="modal-dialog modal-lg">  
                 <div class="modal-content">
@@ -101,44 +138,71 @@
                 
                         <div class="modal-body">
                             <div class="container">
-                                <div>
-                                    <label for="">Primer Nombre</label>
-                                    <input type="text">
-                                </div>
-                                
-                                <div>
-                                        <label for="">Segundo Nombre</label>
-                                        <input type="text">
-                                </div>
-        
-                                <div>
-                                        <label for="">Primer Apellido</label>
-                                        <input type="text">
-                                </div>
-        
-                                <div>
-                                        <label for="">Segundo Apellido</label>
-                                        <input type="text">
-                                </div>
-        
-                                <div>
-                                        <label for="">Telefono</label>
-                                        <input type="text">
-                                </div>
-                                
-                                <div>
-                                        <label for="">Direccion</label>
-                                        <input type="text">
-                                </div>
-        
-                                <div>
-                                        <label for="">Nit</label>
-                                        <input type="text">
-                                </div>
-        
-                                <div>
-                                    <input type="button" class="btn btn-primary" value="Agregar Cliente">
-                                </div>
+                                    <div class="group">      
+                                            <input type="text" required #Pnombre>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Primer Nombre</label>
+                                        </div>
+                    
+                                        
+                                        <div class="group">      
+                                            <input type="text" required #Snombre>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Segundo Nombre</label>
+                                        </div>
+                    
+                
+                                        <div class="group">      
+                                            <input type="text" required #Papellido>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Primer Apellido</label>
+                                        </div>
+                    
+                
+                                        <div class="group">      
+                                            <input type="text" required #Sapellido>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Segundo Apellido</label>
+                                        </div>
+                    
+                
+                                        <div class="group">      
+                                            <input type="number" required #Telefono>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Telefono</label>
+                                        </div>
+                    
+                                        
+                                        <div class="group">      
+                                            <input type="text" required #Direccion>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Direccion</label>
+                                        </div>
+                    
+                
+                                        <div class="group">      
+                                            <input type="text" required #Nit>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>NIT</label>
+                                        </div>
+                    
+                                        <button class="btn-material primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
+                                            <span>
+                                                Agregar
+                                            </span>
+                                        </button>
+                                        <button class="btn-material red" data-dismiss="modal">
+                                            <span>
+                                                cancelar
+                                            </span>
+                                        </button>
                             </div>
                         </div>
                 
@@ -161,14 +225,19 @@
         
                 <div class="modal-body">
                     <div class="container">
-                        <div>
-                            <label for="">ID Cliente</label>
-                            <input type="text">
-                        </div>
+                        <p>desea Eliminar Al Cliente</p>
+                        <p>nombres + apellidos </p>
 
-                        <div>
-                            <input type="button" class="btn btn-Danger" value="Desactivar">
-                        </div>
+                        <button class="btn-material primary" (click)="delete_client()">
+                            <span>
+                                Eliminar
+                            </span>
+                        </button>
+                        <button class="btn-material red" data-dismiss="modal">
+                            <span>
+                                cancelar
+                            </span>
+                        </button>
                     </div>
                 </div>
         

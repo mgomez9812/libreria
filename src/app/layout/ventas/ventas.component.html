@@ -1,72 +1,47 @@
 <div class="contenido">
+    <br><br>
         <!-- button new Product -->
+<<<<<<< HEAD
         <button class="btnMaterial button_add" data-toggle="modal" data-target=".dashboar"><span>Agregar</span></button>
         <br><br>
         
         <table class="table " border="1px">
+=======
+        <table id="load_ventas" class="mdl-data-table compact hover row-border" style="width:100%">
+>>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
             <thead>
-                    <th>Nombre Cliente</th>
-                    <th>Nit</th>
+                <tr>
+                    <th>Datos Cliente</th>
+                    <th>NIT</th>
                     <th>Vendedor</th>
-                    <th>sucursal</th>
-                    <th>descripcion</th>
-                    <th>Editar</th>
-                    <th>eliminar</th>
+                    <th>Sucursal</th>
+                    <th>servicio</th>
+                    <th>Descripcion</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
             </thead>
             <tbody>
-                <td>Nombre</td>
-                <td>Nit</td>
-                <td>Vendedor</td>
-                <td>Sucursal</td>
-                <td>descripcion</td>
-                <td><button class="btn btn-success">Editar</button></td>
-                <td><button class="btn btn-danger">Eliminar</button></td>
+                <tr>
+                    <td>Nombre + apellido</td>
+                    <td>NIT</td>
+                    <td>Vendedor name</td>
+                    <td>Sucursal</td>
+                    <td>Servicio</td>
+                    <td>descripcion</td>
+                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".vermas"><span>Ver mas...</span> </button></td>
+                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".anularventa"><span>Anular</span></button></td>
+                </tr>
             </tbody>
-            
         </table>
+
+
         </div>
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
         <!-- modal new product -->
-        <div class="modal fade dashboar" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade vermas" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
         
         <div class="modal-dialog modal-lg">  
         <div class="modal-content">
@@ -78,10 +53,31 @@
                 </div>
         
                 <div class="modal-body">
-                cuerpo del modal
+                    <p>cliente: nombre Cliente</p>
+                    <p>usuario: atendio Nombre Usuario</p>
+                    <p>Hora: hora </p>
+                    <p>Descripcion:ventas </p>
+                    
                 </div>
         
         </div>
         </div>
         </div>
-        
+<!--anular venta o factura en este caso ?-->
+<div class="modal fade anularventa" tabindex="1" aria-labelledby="myLargeModalLabel" aria-hidden="trye">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Anular Venta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Anular venta | factura </p>
+                <p>API debe de regresar todo el producto al inventario de la sucursal que fue vendido </p>
+            </div>
+        </div>
+
+    </div>
+</div>

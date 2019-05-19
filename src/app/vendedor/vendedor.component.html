@@ -1,0 +1,292 @@
+<div class="navbar1">
+  <ul>
+    <li> <a href="#" class="close-sesion"><i class="fa fa-power-off"></i> cerrar sesion</a> </li>
+    <li> <a href="#" class="user">nombre usuario</a> </li>
+  </ul>
+  </div>
+<div class="container-full" *ngIf="ingreso_caja == false">
+      <div class="container">
+          <div class="row">
+            <!--control de caja inicio-->
+            <form action="" class="form1">
+      
+                <div class="group">
+                    <input type="number" min="0" required #number>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Inicio Caja</label>
+                </div>
+                <br>
+                <div class="alert alert-danger" role="alert" *ngIf="estado_txt_caja == true">
+                    Debe de ingresar una cantidad
+                </div>
+              <button class="btn-material primary btn-center" (click)="function_estado_caja(number.value)">
+                <span>
+                    Aceptar
+                </span>
+              </button>
+            </form>
+
+          </div>
+      </div>
+</div>
+
+<div class="container-full" *ngIf="ingreso_caja == true">
+    <br><br>
+        <!--para las ventas-->
+                <table id="vendedor_precios" class="mdl-data-table compact hover row-border" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>codigo</th>
+                          <th>nombre</th>
+                          <th>Descripcion</th>
+                          <th>existencia</th>
+                          <th>precio</th>
+                          <th>marca</th>
+                          <th>cantidad Mayorista</th>
+                          <th>Precio Mayorista</th>
+                          <th>Agregar a Factura</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>001</td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>61</td>
+                          <td>$320,800</td>
+                          <td>Marca</td>
+                          <td>60</td>
+                          <td>$320,800</td>
+                          <td><button class="btn btn-danger" data-toggle="modal" data-target=".addfactura">Agregar a Factura</button></td>
+                      </tr>
+                      <tr>
+                          <td>001</td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>61</td>
+                          <td>$320,800</td>
+                          <td>Marca</td>
+                          <td>60</td>
+                          <td>$320,800</td>
+                          <td><button class="btn btn-danger" data-toggle="modal" data-target=".addfactura"> Agregar a Factura</button></td>
+                      </tr>
+                      <tr>
+                          <td>001</td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>61</td>
+                          <td>$320,800</td>
+                          <td>Marca</td>
+                          <td>60</td>
+                          <td>$320,800</td>
+                          <td><button class="btn btn-danger" data-toggle="modal" data-target=".addfactura">Agregar a Factura</button></td>
+                      </tr>                      <tr>
+                          <td>001</td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>61</td>
+                          <td>$320,800</td>
+                          <td>Marca</td>
+                          <td>60</td>
+                          <td>$320,800</td>
+                          <td><button class="btn btn-danger" data-toggle="modal" data-target=".addfactura">Agregar a Factura</button></td>
+                      </tr>                      <tr>
+                          <td>001</td>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>61</td>
+                          <td>$320,800</td>
+                          <td>Marca</td>
+                          <td>60</td>
+                          <td>$320,800</td>
+                          <td><button class="btn btn-danger" data-toggle="modal" data-target=".addfactura">Agregar a Factura</button></td>
+                      </tr>
+                  </tbody>
+              </table>
+
+<br>
+<hr>
+factura 
+<hr>
+
+  <div class=" container factura ">
+    <table class="table">
+      <tr>
+        <td>codigo</td>
+        <td>nombre</td>
+        <td>cantidad</td>
+        <td>precio</td>
+        <td>subtotal</td>
+        <td>eliminar</td>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>producto 1</td>
+        <td>10</td>
+        <td>10.00</td>
+        <td>100.00</td>
+        <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_factura">eliminar</button></td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>producto 2</td>
+        <td>10</td>
+        <td>10.00</td>
+        <td>100.00</td>
+        <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_factura">eliminar</button></td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>producto 3</td>
+        <td>10</td>
+        <td>10.00</td>
+        <td>100.00</td>
+        <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_factura">eliminar</button></td>
+      </tr>
+    </table>
+
+    <button class="btn-material"  data-toggle="modal" data-target=".factura1">
+      <span>
+          finalizar venta
+      </span>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- modal add producto to factura -->
+<div class="modal fade addfactura" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">  
+    <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Factura</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    
+            <div class="modal-body">
+                <div class="group">
+                    <input type="number" min="0" required #number>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Cantidad de producto</label>
+                </div>
+            <button class="btn-material">
+              <span>
+                Agregar a Factura
+              </span>
+            </button>
+
+            <button class="btn-material red" data-dismiss="modal" aria-label="Close">
+              <span>
+                cancelar
+              </span>
+            </button>
+            </div>
+    
+    </div>
+    </div>
+    </div>
+
+
+<!-- modal add producto to factura -->
+<div class="modal fade delete_factura" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">  
+    <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar de Factura</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    
+            <div class="modal-body">
+            <button class="btn-material">
+              <span>
+                Eliminar
+              </span>
+            </button>
+
+            <button class="btn-material red" data-dismiss="modal" aria-label="Close">
+              <span>
+                cancelar
+              </span>
+            </button>
+            </div>
+    
+    </div>
+    </div>
+    </div>
+
+
+    <!-- modal to factura -->
+<div class="modal fade factura1" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">  
+    <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Factura</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    
+            <div class="modal-body">
+
+
+                <div class="group">
+                    <input type="text" min="0" required #number>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>NIT</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" min="0" required #number>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Nombre</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" min="0" required #number>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Lugar</label>
+                </div>
+
+                <div class="group">
+                    <input type="number" min="0" required #number disabled value="100.00">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="total_pagar">Total a Pagar</label>
+                </div>
+            <button class="btn-material">
+              <span>
+                Agregar a Factura
+              </span>
+            </button>
+
+            <button class="btn-material red" data-dismiss="modal" aria-label="Close">
+              <span>
+                cancelar
+              </span>
+            </button>
+
+
+            </div>
+    
+    </div>
+    </div>
+    </div>

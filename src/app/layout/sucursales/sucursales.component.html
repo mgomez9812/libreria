@@ -1,23 +1,39 @@
 <div class="contenido">
         <!-- button new Product -->
+<<<<<<< HEAD
         <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_Sucursal"><span>Agregar</span> </button>
         <br><br>
         
         <table class="table " border="1px">
+=======
+        <button class="btn-material primary button_add" data-toggle="modal" data-target=".add_Sucursal"> <span>Agregar</span></button>
+
+        <table id="load_sucursales" class="mdl-data-table compact hover row-border" style="width:100%">
+>>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
             <thead>
+                <tr>
                     <th>Nombre</th>
                     <th>Direccion</th>
-                    <th>Actualizar</th>
-                    <th>Eliminar</th>
+                    <th>Encargado</th>
+                    <th>Estado</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
             </thead>
             <tbody>
-                <td>Nombre</td>
-                <td>Direccion</td>
-                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_Sucursal">edita</button></td>
-                <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_sucursal">eliminar</button></td>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Direccion</td>
+                    <td>Encargado</td>
+                    <td>Estado</td>
+                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_Sucursal"><span>Actualizar</span> </button></td>
+                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".delete_sucursal"><span>Eliminar</span></button></td>
+                </tr>
+    
+    
             </tbody>
-            
         </table>
+
         </div>
         
         
@@ -35,13 +51,20 @@
                 </div>
         
                 <div class="modal-body">
-                    <div>
-                        <label for="">nombre</label>
-                        <input type="text">
+
+
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Nombre Sucursal</label>
                     </div>
-                    <div>
-                        <label for="">direccion</label>
-                        <input type="text">
+
+                    <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Direccion</label>
                     </div>
                     
                         <button class="btn btn-primary">Agregar</button>
@@ -65,16 +88,32 @@
                         </div>
                 
                         <div class="modal-body">
-                            <div>
-                                <label for="">nombre</label>
-                                <input type="text">
-                            </div>
-                            <div>
-                                <label for="">direccion</label>
-                                <input type="text">
-                            </div>
+                            <br>
+                                <div class="group">      
+                                        <input type="text" required #Pnombre>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>Nombre Sucursal</label>
+                                    </div>
+                
+                                    <div class="group">      
+                                            <input type="text" required #Pnombre>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Direccion</label>
+                                    </div>
+                                            
                             
-                                <button class="btn btn-success">Agregar</button>
+                                <button class="btn-material primary">
+                                    <span>
+                                    Agregar
+                                    </span>
+                                    </button>
+                                <button class="btn-material red" data-dismiss="modal">
+                                    <span>
+                                        Cancelar
+                                    </span>
+                                </button>
                         </div>
                 
                 </div>
@@ -94,12 +133,20 @@
                         </div>
                 
                         <div class="modal-body">
-                            <div>
-                                <label for="">nombre</label>
-                                <input type="text">
-                            </div>
-                            
-                                <button class="btn btn-danger">Agregar</button>
+                            <p>desea Eliminar esta sucursal</p>
+                            <p>sucursal Nombre</p>
+                            <br>
+                            <button class="btn-material primary">
+                                <span>
+                                    Eliminar                                    
+                                </span>
+
+                            </button>
+                            <button class="btn-material red">
+                                <span>
+                                    Cancelar
+                                </span>
+                            </button>
                         </div>
                 
                 </div>

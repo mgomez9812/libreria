@@ -1,26 +1,39 @@
 <div class="contenido">
+    <p class="title1">representante</p>
         <!-- button new represent -->
+<<<<<<< HEAD
         <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_representate"> <span>nuevo representante</span> </button>
         <br><br>
         
         <table class="table " border="1px">
+=======
+        <button class="btn-material primary button_add" data-toggle="modal" data-target=".add_representate"> <span>nuevo representante</span> </button>
+
+        <table id="load_representante" class="mdl-data-table compact hover row-border" style="width:100%">
+>>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
             <thead>
-                    <th>Nombre Representante</th>
-                    <th>Apellidos Representante</th>
+                <tr>
+                    <th>nombres</th>
+                    <th>Apellidos</th>
                     <th>Telefono</th>
-                    <th>Actualizar</th>
-                    <th>Eliminar</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
             </thead>
             <tbody>
-                <td>Nombres</td>
-                <td>Apellidos</td>
-                <td>Telefono</td>
-                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_representate">actualizar</button> </td>
-                <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_representante">eliminar</button></td>
+                <tr>
+                    <td>Nombres</td>
+                    <td>Apellidos</td>
+                    <td>Telefono</td>
+                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
+                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
+                </tr>
+    
+    
             </tbody>
-            
         </table>
 
+<<<<<<< HEAD
         <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_proveedor"><span>Agregar Proveedor</span> </button>
         <br><br>
         <table class="table " border="1px">
@@ -43,7 +56,43 @@
                     <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_proveedor">eliminar proveedor</button></td>
                 </tbody>
                 
+=======
+
+
+
+
+
+
+
+        <p class="title">proveedor</p>
+        <button class="btn-material primary" data-toggle="modal" data-target=".add_proveedor"> <span>Agregar Proveedor</span> </button>
+
+        <table id="load_proveedor" class="mdl-data-table compact hover row-border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>nombres Representante</th>
+                    <th>Nombre Proveedor</th>
+                    <th>NIT proveedor</th>
+                    <th>telefono</th>
+                    <th>ACTUALIZAR</th>
+                    <th>ELIMINAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombres Representante</td>
+                    <td>Nombre proveedor</td>
+                    <td>NIT Proveedor</td>
+                    <td>Telefono</td>
+                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_proveedor"><span>Actualizar</span> </button></td>
+                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".delete_proveedor"><span>Eliminar</span></button></td>
+                </tr>
+    
+    
+            </tbody>
+>>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
         </table>
+
         </div>
         
 <!-- modal new representante -->
@@ -58,31 +107,52 @@
                 </div>
                 <div class="modal-body">
                 <div class="container">
-                    <div>
-                        <label for="">primer nombre</label>
-                        <input type="text">
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Primer Nombre</label>
                     </div>
 
-                    <div>
-                        <label for="">Segundo nombre</label>
-                          <input type="text">
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Segundo Nombre</label>
                     </div>
 
-                    <div>
-                        <label for="">primer Apellido</label>
-                        <input type="text">
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Primer Apellido</label>
                     </div>
 
-                    <div>
-                        <label for="">Segundo Apellido</label>
-                        <input type="text">
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Segundo Apellido</label>
                     </div>
 
-                    <div>
-                        <label for="">Telefono</label>
-                        <input type="text">
+                    <div class="group">      
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Telefono</label>
                     </div>
 
+                    <button class="btn-material primary">
+                        <span>
+                            agregar
+                        </span>
+                    </button>
+
+                    <button class="btn-material red" data-dismiss="modal">
+                        <span>
+                            cancelar
+                        </span>
+                    </button>
                 </div>
                 </div>
         
@@ -177,34 +247,57 @@
                     </div>
                     <div class="modal-body">
                     <div class="container">
-                        <div>
-                            <label for="">nombre</label>
-                            <input type="text">
+                        
+                        <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nombre Empresa</label>
                         </div>
     
-                        <div>
-                            <label for="">NIT</label>
-                            <input type="text" name="" id="">
+                        <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>NIT</label>
                         </div>
-                        <div>
-                            <label for="">Direccion</label>
-                            <input type="text">
+
+                        <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Direccion</label>
                         </div>
-                        <div>
-                            <label for="">representante</label>
-                            <select name="" id="">
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
+
+                        <div class="group">      
+                            <input type="text" required #Pnombre>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Descripcion</label>
+                        </div>
+
+                        <!--Select with pure css-->
+                        <div class="select">
+                            <select class="select-text" required #select>
+                                <option value="" disabled selected></option>
+                                <option value="1">Representante 1</option>
+                                <option value="2">Representante 2   </option>
                             </select>
+                            <span class="select-highlight"></span>
+                            <span class="select-bar"></span>
+                            <label class="select-label">Representante</label>
                         </div>
-                        <div>
-                            <label for="">Descripcion</label>
-                            <input type="text">
-                        </div>
+                
+                        <button class="btn-material primary">
+                            <span>
+                                agregar
+                            </span>
+                        </button>
+                        <button class="btn-material red">
+                            <span>
+                                cancelar
+                            </span>
+                        </button>
     
                     </div>
                     </div>

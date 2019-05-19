@@ -1,90 +1,251 @@
 <div class="contenido">
-<!-- button new Product -->
-<button class="btn btn-primary button_add" data-toggle="modal" data-target=".dashboar">Agregar</button>
-<br><br>
+    <!-- button new Product -->
+    <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_producto"><span>Agregar</span> </button>
+    <button class="btnMaterial button_add factura" data-toggle="modal" data-target=".add_factura"><span>Realizar
+            Venta</span></button>
+    <br><br>
 
-<table class="table " border="1px">
-    <thead>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>existencia</th>
-            <th>precio</th>
-            <th>Marca</th>
-            <th>categoria</th>
-            <th>actualizar</th>
-            <th>desactivar</th>
-    </thead>
-    <tbody>
-        <td>Codigo</td>
-        <td>Nombre</td>
-        <td>Descripcion</td>
-        <td>existencia</td>
-        <td>precio</td>
-        <td>Marca</td>
-        <td>Categoria</td>
-        <td><button class="btn btn-info">editar</button></td>
-        <td><button class="btn btn-danger">desactivar</button></td>
-    </tbody>
-    
-</table>
+    <table class="tableMaterial" border="1px">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>existencia</th>
+                <th>precio</th>
+                <th>Marca</th>
+                <th>categoria</th>
+                <th>actualizar</th>
+                <th>desactivar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Codigo</td>
+                <td>Nombre</td>
+                <td>Descripcion</td>
+                <td>existencia</td>
+                <td>precio</td>
+                <td>Marca</td>
+                <td>Categoria</td>
+                <td><button class="btn btn-success" data-toggle="modal" data-target=".update_producto">editar</button>
+                </td>
+                <td><button class="btn btn-danger">desactivar</button></td>
+            </tr>
+        </tbody>
+
+    </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 <!-- modal new product -->
-<div class="modal fade dashboar" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade add_producto" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 
-<div class="modal-dialog modal-lg">  
-<div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div>
+                        <label for="">codigo</label>
+                        <input type="text" id="" (ngModel)="iPrueba.codigo" name="codigo">
+                    </div>
+
+                    <div>
+                        <label for="">nombre</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Descripcion</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">existencia</label>
+                        <input type="text" name="" id="" disabled>
+                    </div>
+                    <div>
+                        <label for="">precio</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">marca</label>
+                        <select name="" id="">
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">categoria</label>
+                        <select name="" id="">
+                            <option value="">opcion1</option>
+                            <option value="">opcion1</option>
+                            <option value="">opcion1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" (click)='addProductoVenta()'>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+    </div>
+</div>
 
-        <div class="modal-body">
-        cuerpo del modal
+<!-- modal update product -->
+<div class="modal fade update_producto" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div>
+                        <label for="">codigo</label>
+                        <input type="text" name="" id="" disabled>
+                    </div>
+
+                    <div>
+                        <label for="">nombre</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Descripcion</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">existencia</label>
+                        <input type="text" name="" id="" disabled>
+                    </div>
+                    <div>
+                        <label for="">precio</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">marca</label>
+                        <select name="" id="">
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                            <option value="">opcion</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">categoria</label>
+                        <select name="" id="">
+                            <option value="">opcion1</option>
+                            <option value="">opcion1</option>
+                            <option value="">opcion1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+    </div>
+</div>
 
-</div>
-</div>
+
+<!-- modal from factura -->
+<div class="modal fade add_factura" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Facturacion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div>
+                        <label for="">nit cliente</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div>
+                        <label for="">nombre</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div>
+                        <table class="table">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>precio unidad</th>
+                                <th>unidades</th>
+                                <th>total</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Papel</td>
+                                <td>27.00</td>
+                                <td>2</td>
+                                <td>44.00</td>
+                                <td>Eliminar</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Papel</td>
+                                <td>27.00</td>
+                                <td>2</td>
+                                <td>44.00</td>
+                                <td>Eliminar</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Papel</td>
+                                <td>27.00</td>
+                                <td>2</td>
+                                <td>44.00</td>
+                                <td>Eliminar</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>total</td>
+                                <td></td>
+                                <td></td>
+                                <td>150.00</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <!-- Los productos seran asignados por medio de un array genreal -->
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">
+                            finalizar
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

@@ -6,6 +6,13 @@
     z-index: 1;
     display: none;
 }
+.colocar{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    list-style:none;
+
+}
 
 .side-nav ul {
     margin: 0;

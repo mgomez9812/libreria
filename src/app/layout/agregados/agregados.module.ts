@@ -6,7 +6,7 @@ import { AgregadosComponent } from './agregados.component';
 
 @NgModule(
     {
-        imports:[
+        imports: [
             CommonModule,
             AgregadosRoutingModule,
         ],
@@ -15,5 +15,7 @@ import { AgregadosComponent } from './agregados.component';
         ]
     }
 )
+
+
 
 export class AgregadosModule {}

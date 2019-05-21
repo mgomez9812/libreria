@@ -1,203 +1,207 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 /*para colocar correctamente el contenido*/
-.contenido{
+
+.contenido {
     margin-left: 250px;
     position: relative;
-  }
-  
+}
+
+
 /*
 *boton para dar el espaciado entre los botones
 * para darle forma a los botones 
 */
-.button_add{
-  margin-top: 15px;
-  margin-left: 10px;
+
+.button_add {
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
-<<<<<<< HEAD
+
 /*INCIO PARA LOS BOTONES*/
-.btnMaterial{
-=======
-/*para los botones*/
-.btn-material{
-  position: relative;
-  display: inline-block;
-  margin: 30px auto;
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-  padding: 0;
-  overflow: hidden;
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-<<<<<<< HEAD
-  box-shadow:  0 1px 4px rgba(0, 0, 0, .6);
-  background-color: #2ecc71;
-  color: #ecf0f1;
-  transition: background-color .3s;
-}
-.btnMaterial:hover, .btnMaterial:focus {
-  background-color: #27ae60;
+
+.btnMaterial {
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
 }
 
-.btnMaterial > * {
-  position: relative;
+.btnMaterial:hover,
+.btnMaterial:focus {
+    background-color: #27ae60;
+}
+
+.btnMaterial>* {
+    position: relative;
 }
 
 .btnMaterial span {
-  display: block;
-  padding: 6px 10px;
+    display: block;
+    padding: 6px 10px;
 }
 
 .btnMaterial:before {
-=======
-  box-shadow: 0 1px 4px rgba(0,0,0, .6);
-  background-color: #00C853;
-  color: #ecf0f1;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: backgroud-color .3s;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 100%;
+    background-color: rgba(236, 240, 241, .3);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.btn-material:hover, .btn-material:focus {
-  background-color: #27ae60;
-}
-
-.btn-material > * {
-  position: relative;
-}
-
-.btn-material span {
-  display: block;
-  padding: 12px 24px;
-}
-
-.btn-material:before {
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-  content: "";
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  display: block;
-  width: 0;
-  padding-top: 0;
-    
-  border-radius: 100%;
-  
-  background-color: rgba(236, 240, 241, .3);
-  
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-<<<<<<< HEAD
 .btnMaterial:active:before {
-=======
-.btn-material:active:before {
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-  width: 120%;
-  padding-top: 120%;
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
+    width: 120%;
+    padding-top: 120%;
+    transition: width .2s ease-out, padding-top .2s ease-out;
 }
-<<<<<<< HEAD
+
+
 /*FIN DE LOS BOTONES MATERIAL */
 
+
 /*INICIO MATERIAL PARA TABLAS */
-=======
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
 
 
 /*FIN PARA TABLA MATERIAL*/
 
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+/* FIN PARA MATERIALIZE */
+
+
 /* Styles, not important */
-*, *:before, *:after {
-  box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 .btnMaterial.orange {
-  background-color: #e67e22;
+    background-color: #e67e22;
 }
 
-.btnMaterial.orange:hover, .btn.orange:focus {
-  background-color: #d35400;
+.btnMaterial.orange:hover,
+.btn.orange:focus {
+    background-color: #d35400;
 }
 
 .btnMaterial.red {
-  background-color: #e74c3c;
+    background-color: #e74c3c;
 }
 
-.btnMaterial.red:hover, .btnMaterial.red:focus {
-  background-color: #c0392b;
+.btnMaterial.red:hover,
+.btnMaterial.red:focus {
+    background-color: #c0392b;
 }
 
 .btnMaterial.factura {
-  background-color:  #03A9F4;
+    background-color: #03A9F4;
 }
 
-.btnMaterial.factura:hover, .btnMaterial.factura:focus {
-  background-color: #0288D1;
+.btnMaterial.factura:hover,
+.btnMaterial.factura:focus {
+    background-color: #0288D1;
+}
+
+.btnMaterial.primary {
+    background-color: #01579B;
+}
+
+.btnMaterial.primary:hover,
+.btnMaterial.primary:focus {
+    background-color: #0288D1;
 }
 
 
 /* Styles, not important */
-*, *:before, *:after {
-  box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 
+/* set element styles to fit tablet and higher(desktop) */
 
-.btn-material.orange {
-  background-color: #e67e22;
-}
-
-.btn-material.orange:hover, .btn-material.orange:focus {
-  background-color: #d35400;
-}
-
-.btn-material.red {
-  background-color: #e74c3c;
-}
-
-.btn-material.red:hover, .btn-material.red:focus {
-  background-color: #c0392b;
-}
-
-.btn-material.primary{
-  background-color: #0288D1;
-}
-
-.btn-material.primary:hover, .btn-material.primary:focus{
-  background-color: #01579B;
-}
-
-  /* set element styles to fit tablet and higher(desktop) */
-  @media screen and (min-width: 200px) {
-    .contenido{
-      margin-left: 50px;
+@media screen and (min-width: 200px) {
+    .contenido {
+        margin-left: 50px;
     }
-  }
-  
-  /* set element styles to fit tablet and higher(desktop) */
-  @media screen and (min-width: 400px) {
-    .contenido{
-      margin-left: 50px;
+}
+
+
+/* set element styles to fit tablet and higher(desktop) */
+
+@media screen and (min-width: 400px) {
+    .contenido {
+        margin-left: 50px;
     }
-  }
-  /* set element styles to fit tablet and higher(desktop) */
-  @media screen and (min-width: 600px) {
-    .contenido{
-      margin-left: 75px;
+}
+
+
+/* set element styles to fit tablet and higher(desktop) */
+
+@media screen and (min-width: 600px) {
+    .contenido {
+        margin-left: 75px;
     }
-  }
-  /* set element styles for desktop */
-  @media screen and (min-width: 800px) {
-    .contenido{
-      margin-left: 220px;
+}
+
+
+/* set element styles for desktop */
+
+@media screen and (min-width: 800px) {
+    .contenido {
+        margin-left: 220px;
     }
-  }
-  
+}

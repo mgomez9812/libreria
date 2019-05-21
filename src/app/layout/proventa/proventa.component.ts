@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Proventa } from '../../providers/proventa';
 import { Prueba } from '../../providers/prueba';
+import { NgForm } from '@angular/forms';
+
 
 
 
@@ -13,37 +15,16 @@ declare var $;
 })
 
 export class ProventaComponent implements OnInit {
-   iPrueba: Prueba;
+   iPrueba: Array<Prueba>;
+  iProventa: Array<Proventa>;
 
-<<<<<<< HEAD
-  iProventa: Proventa[] = [];
-  constructor() { }
-=======
-  constructor() {
-    $(document).ready(function() {
-      $('#example').DataTable( {
-      } );
-  } );
-
-
-   }
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-
-  addProductoVenta() {
-    // this.iProventa = [
-    //   codigo: 1,
-    //   nombre : 'Text',
-    //   description: 'Text',
-    //   existencia : 1,
-    //   precio: 1,
-    //   marca: 1,
-    //   categoria: 1,
-    // ]
+  constructor() { 
     
-    
+  }
 
-
-    console.log(this.iPrueba);
+  addProductoVenta(form: NgForm) {
+    this.iProventa = form.value;
+    console.log(this.iProventa);
   }
 
 

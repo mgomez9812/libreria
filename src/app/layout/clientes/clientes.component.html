@@ -1,253 +1,240 @@
 <div class="contenido">
-        <!-- button new Product -->
-<<<<<<< HEAD
-        <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_cliente"><span>Agregar</span></button>
-        <br><br>
-        
-        <table class="table" border="1px">
-=======
-        <button class="btn-material primary button_add" data-toggle="modal" data-target=".add_cliente"><span>Agregar</span></button>
+    <!-- button new Product -->
+    <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_cliente"><span>Agregar</span></button>
+    <br><br>
 
-        <table id="load_client" class="mdl-data-table compact hover row-border" style="width:100%">
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-            <thead>
-                <tr>
-                    <th>nombres</th>
-                    <th>Apellidos</th>
-                    <th>Telefono</th>
-                    <th>Direccion</th>
-                    <th>NIT</th>
-                    <th>ACTUALIZAR</th>
-                    <th>ELIMINAR</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Nombres</td>
-                    <td>Apellidos</td>
-                    <td>Telefono</td>
-                    <td>Direccion</td>
-                    <td>NIT</td>
-                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
-                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
-                </tr>
-    
-    
-            </tbody>
-        </table>
+    <table class="table" border="1px">
+        <thead>
+            <tr>
+                <th>nombres</th>
+                <th>Apellidos</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>NIT</th>
+                <th>ACTUALIZAR</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Telefono</td>
+                <td>Direccion</td>
+                <td>NIT</td>
+                <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
+                <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
+            </tr>
 
-        </div>
-        
 
-        
+        </tbody>
+    </table>
 
-        
-        
-        <!-- modal new cliente -->
-        <div class="modal fade add_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        
-        <div class="modal-dialog modal-lg">  
+</div>
+
+
+
+
+
+
+<!-- modal new cliente -->
+<div class="modal fade add_cliente" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+            </div>
+
+            <div class="modal-body">
+                <br>
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Primer Nombre</label>
+                                <input type="text" required class="form-control" ngModel #Pnombre>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Segundo Nombre</label>
+                                <input type="text" class="form-control" ngModel #Snombre required>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Primer Apellido</label>
+                                <input type="text" class="form-control" ngModel required #Papellido>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Segundo Apellido</label>
+                                <input type="text" class="form-control" ngModel required #Sapellido>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Telefono</label>
+                                <input type="number" class="form-control" ngModel required #Telefono>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Direccion</label>
+                                <input type="text" class="form-control" ngModel required #Direccion>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>NIT</label>
+                                <input type="text" class="form-control" ngModel required #Nit>
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <button class="btn btn-primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
+                                        Agregar
+                                </button>
+
+                                <button class="btn btn-danger" data-dismiss="modal">
+                                        cancelar
+                                </button>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
                 </div>
-        
-                <div class="modal-body">
-                    <br>
-                    <div class="container">
-                        <div class="group">      
-                            <input type="text" required #Pnombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Primer Nombre</label>
-                        </div>
-    
-                        
-                        <div class="group">      
-                            <input type="text" required #Snombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Segundo Nombre</label>
-                        </div>
-    
+            </div>
 
-                        <div class="group">      
-                            <input type="text" required #Papellido>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Primer Apellido</label>
-                        </div>
-    
-
-                        <div class="group">      
-                            <input type="text" required #Sapellido>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Segundo Apellido</label>
-                        </div>
-    
-
-                        <div class="group">      
-                            <input type="number" required #Telefono>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Telefono</label>
-                        </div>
-    
-                        
-                        <div class="group">      
-                            <input type="text" required #Direccion>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Direccion</label>
-                        </div>
-    
-
-                        <div class="group">      
-                            <input type="text" required #Nit>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>NIT</label>
-                        </div>
-    
-                        <button class="btn-material primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
-                            <span>
-                                Agregar
-                            </span>
-                        </button>
-                        <button class="btn-material red" data-dismiss="modal" >
-                            <span>
-                                cancelar
-                            </span>
-                        </button>
-
-                    </div>
-                </div>
-        
         </div>
-        </div>
-        </div>
+    </div>
+</div>
 
 <!-- modal Update cliente -->
-<div class="modal fade update_client" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
-     
-                <div class="modal-dialog modal-lg">  
-                <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Actualizar Cliente</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade update_client" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
-                
-                        <div class="modal-body">
-                            <div class="container">
-                                    <div class="group">      
-                                            <input type="text" required #Pnombre>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Primer Nombre</label>
-                                        </div>
-                    
-                                        
-                                        <div class="group">      
-                                            <input type="text" required #Snombre>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Segundo Nombre</label>
-                                        </div>
-                    
-                
-                                        <div class="group">      
-                                            <input type="text" required #Papellido>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Primer Apellido</label>
-                                        </div>
-                    
-                
-                                        <div class="group">      
-                                            <input type="text" required #Sapellido>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Segundo Apellido</label>
-                                        </div>
-                    
-                
-                                        <div class="group">      
-                                            <input type="number" required #Telefono>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Telefono</label>
-                                        </div>
-                    
-                                        
-                                        <div class="group">      
-                                            <input type="text" required #Direccion>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>Direccion</label>
-                                        </div>
-                    
-                
-                                        <div class="group">      
-                                            <input type="text" required #Nit>
-                                            <span class="highlight"></span>
-                                            <span class="bar"></span>
-                                            <label>NIT</label>
-                                        </div>
-                    
-                                        <button class="btn-material primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div class="group">
+                        <input type="text" required #Pnombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Primer Nombre</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="text" required #Snombre>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Segundo Nombre</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="text" required #Papellido>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Primer Apellido</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="text" required #Sapellido>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Segundo Apellido</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="number" required #Telefono>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Telefono</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="text" required #Direccion>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Direccion</label>
+                    </div>
+
+
+                    <div class="group">
+                        <input type="text" required #Nit>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>NIT</label>
+                    </div>
+
+                    <button class="btn-material primary" (click)='create_client(Pnombre.value, Snombre.value, Papellido.value, Sapellido.value, Telefono.value, Direccion.value, Nit.value)'>
                                             <span>
                                                 Agregar
                                             </span>
                                         </button>
-                                        <button class="btn-material red" data-dismiss="modal">
+                    <button class="btn-material red" data-dismiss="modal">
                                             <span>
                                                 cancelar
                                             </span>
                                         </button>
-                            </div>
-                        </div>
-                
                 </div>
-                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 
 <!-- Desactivar cliente -->
-<div class="modal fade desact_cliente" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">
-     
-        <div class="modal-dialog modal-lg">  
+<div class="modal fade desact_cliente" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Desactivar Cliente</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Desactivar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-        
-                <div class="modal-body">
-                    <div class="container">
-                        <p>desea Eliminar Al Cliente</p>
-                        <p>nombres + apellidos </p>
+            </div>
 
-                        <button class="btn-material primary" (click)="delete_client()">
+            <div class="modal-body">
+                <div class="container">
+                    <p>desea Eliminar Al Cliente</p>
+                    <p>nombres + apellidos </p>
+
+                    <button class="btn-material primary" (click)="delete_client()">
                             <span>
                                 Eliminar
                             </span>
                         </button>
-                        <button class="btn-material red" data-dismiss="modal">
+                    <button class="btn-material red" data-dismiss="modal">
                             <span>
                                 cancelar
                             </span>
                         </button>
-                    </div>
                 </div>
-        
+            </div>
+
         </div>
-        </div>
+    </div>
 </div>

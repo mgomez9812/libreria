@@ -1,387 +1,329 @@
 <div class="contenido">
     <p class="title1">representante</p>
-        <!-- button new represent -->
-<<<<<<< HEAD
-        <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_representate"> <span>nuevo representante</span> </button>
-        <br><br>
-        
-        <table class="table " border="1px">
-=======
-        <button class="btn-material primary button_add" data-toggle="modal" data-target=".add_representate"> <span>nuevo representante</span> </button>
+    <!-- button new represent -->
+    <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_representate"> <span>nuevo representante</span> </button>
+    <br><br>
 
-        <table id="load_representante" class="mdl-data-table compact hover row-border" style="width:100%">
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-            <thead>
-                <tr>
-                    <th>nombres</th>
-                    <th>Apellidos</th>
-                    <th>Telefono</th>
-                    <th>ACTUALIZAR</th>
-                    <th>ELIMINAR</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Nombres</td>
-                    <td>Apellidos</td>
-                    <td>Telefono</td>
-                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
-                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
-                </tr>
-    
-    
-            </tbody>
-        </table>
-
-<<<<<<< HEAD
-        <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_proveedor"><span>Agregar Proveedor</span> </button>
-        <br><br>
-        <table class="table " border="1px">
-                <thead>
-                        <th>nombre_representante</th>
-                        <th>Nombre_proveedor</th>
-                        <th>NIT_Proveedor</th>
-                        <th>telefono</th>
-                        <th>vermas</th>
-                        <th>Actualizar</th>
-                        <th>Eliminar</th>
-                </thead>
-                <tbody>
-                    <td>nombre_representante</td>
-                    <td>Empresa_proveedor</td>
-                    <td>Nit</td>
-                    <td>telefono</td>
-                    <td><button class="btn btn-info">ver mas</button></td>
-                    <td><button class="btn btn-success" data-toggle="modal" data-target=".update_proveedor">actualizar representante</button> </td>
-                    <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_proveedor">eliminar proveedor</button></td>
-                </tbody>
-                
-=======
+    <table class="table " border="1px">
+        <thead>
+            <tr>
+                <th>nombres</th>
+                <th>Apellidos</th>
+                <th>Telefono</th>
+                <th>ACTUALIZAR</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Telefono</td>
+                <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_client"><span>Actualizar</span> </button></td>
+                <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".desact_cliente"><span>Eliminar</span></button></td>
+            </tr>
 
 
+        </tbody>
+    </table>
 
+    <button class="btnMaterial button_add" data-toggle="modal" data-target=".add_proveedor"><span>Agregar Proveedor</span> </button>
+    <br><br>
+    <table class="table " border="1px">
+        <thead>
+            <th>nombre_representante</th>
+            <th>Nombre_proveedor</th>
+            <th>NIT_Proveedor</th>
+            <th>telefono</th>
+            <th>vermas</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+        </thead>
+        <tbody>
+            <td>nombre_representante</td>
+            <td>Empresa_proveedor</td>
+            <td>Nit</td>
+            <td>telefono</td>
+            <td><button class="btn btn-info">ver mas</button></td>
+            <td><button class="btn btn-success" data-toggle="modal" data-target=".update_proveedor">actualizar representante</button> </td>
+            <td><button class="btn btn-danger" data-toggle="modal" data-target=".delete_proveedor">eliminar proveedor</button></td>
+        </tbody>
 
+    </table>
 
+</div>
 
-
-        <p class="title">proveedor</p>
-        <button class="btn-material primary" data-toggle="modal" data-target=".add_proveedor"> <span>Agregar Proveedor</span> </button>
-
-        <table id="load_proveedor" class="mdl-data-table compact hover row-border" style="width:100%">
-            <thead>
-                <tr>
-                    <th>nombres Representante</th>
-                    <th>Nombre Proveedor</th>
-                    <th>NIT proveedor</th>
-                    <th>telefono</th>
-                    <th>ACTUALIZAR</th>
-                    <th>ELIMINAR</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Nombres Representante</td>
-                    <td>Nombre proveedor</td>
-                    <td>NIT Proveedor</td>
-                    <td>Telefono</td>
-                    <td width="10%"><button class="btn-material btn-table" data-toggle="modal" data-target=".update_proveedor"><span>Actualizar</span> </button></td>
-                    <td width="10%"><button class="btn-material red btn-table" data-toggle="modal" data-target=".delete_proveedor"><span>Eliminar</span></button></td>
-                </tr>
-    
-    
-            </tbody>
->>>>>>> 6465cf4104a7fe538a527b941c0d990635949225
-        </table>
-
-        </div>
-        
 <!-- modal new representante -->
-<div class="modal fade add_representate" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-    <div class="modal-dialog modal-lg">  
+<div class="modal fade add_representate" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nuevo representante</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo representante</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
+            </div>
+            <div class="modal-body">
                 <div class="container">
-                    <div class="group">      
-                        <input type="text" required #Pnombre>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Primer Nombre</label>
-                    </div>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Primer Nombre</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                    <div class="group">      
-                        <input type="text" required #Pnombre>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Segundo Nombre</label>
-                    </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Segundo Nombre</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                    <div class="group">      
-                        <input type="text" required #Pnombre>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Primer Apellido</label>
-                    </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Primer Apellido</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                    <div class="group">      
-                        <input type="text" required #Pnombre>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Segundo Apellido</label>
-                    </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Segundo Apellido</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                    <div class="group">      
-                        <input type="text" required #Pnombre>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Telefono</label>
-                    </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Telefono</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 form-group">
+                                <button class="btn btn-primary">
+                                    agregar
+                                </button>
 
-                    <button class="btn-material primary">
-                        <span>
-                            agregar
-                        </span>
-                    </button>
+                                <button class="btn btn-danger" data-dismiss="modal">
+                                    cancelar
+                                </button>
 
-                    <button class="btn-material red" data-dismiss="modal">
-                        <span>
-                            cancelar
-                        </span>
-                    </button>
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
-                </div>
-        
+            </div>
         </div>
     </div>
 </div>
 
 <!--Update Representante-->
-<div class="modal fade update_representante" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade update_representante" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        <div>
-                            <label for="">primer nombre</label>
-                            <input type="text">
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">primer nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">Segundo nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">primer Apellido</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">Segundo Apellido</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">Telefono</label>
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
-    
-                        <div>
-                            <label for="">Segundo nombre</label>
-                              <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">primer Apellido</label>
-                            <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">Segundo Apellido</label>
-                            <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">Telefono</label>
-                            <input type="text">
-                        </div>
-    
-                    </div>
-                    </div>
-            
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    
+</div>
+
 
 <!--Delete Representante-->
-<div class="modal fade delete_representante" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade delete_representante" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar Representante</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        <div>
-                            <label for="">primer nombre</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <button class="btn btn-danger">
-                                eliminar
-                            </button>
-                        </div>
-                    </div>
-                    </div>
-            
             </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">primer nombre</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-12 form-group">
+                        <button class="btn btn-danger">
+                            eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
 
 
 
 <!--para agregar el proveedor-->
-<div class="modal fade add_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade add_proveedor" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        
-                        <div class="group">      
-                            <input type="text" required #Pnombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Nombre Empresa</label>
-                        </div>
-    
-                        <div class="group">      
-                            <input type="text" required #Pnombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>NIT</label>
-                        </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Nombre Empresa</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                        <div class="group">      
-                            <input type="text" required #Pnombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Direccion</label>
-                        </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>NIT</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                        <div class="group">      
-                            <input type="text" required #Pnombre>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Descripcion</label>
-                        </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Direccion</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
 
-                        <!--Select with pure css-->
-                        <div class="select">
-                            <select class="select-text" required #select>
-                                <option value="" disabled selected></option>
-                                <option value="1">Representante 1</option>
-                                <option value="2">Representante 2   </option>
-                            </select>
-                            <span class="select-highlight"></span>
-                            <span class="select-bar"></span>
-                            <label class="select-label">Representante</label>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label>Descripcion</label>
+                                <input type="text" class="form-control" required #Pnombre>
+                            </div>
+
+                            <!--Select with pure css-->
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label class="select-label">Representante</label>
+                                <select class="select-text" class="form-control" required #select>
+                                                <option value="" disabled selected></option>
+                                                <option value="1">Representante 1</option>
+                                                <option value="2">Representante 2   </option>
+                                            </select>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-12 form-group">
+                                <button class="btn btn-primary">
+                                    agregar
+                                </button>
+
+                                <button class="btn btn-danger">
+                                    cancelar
+                                </button>
+                            </div>
                         </div>
-                
-                        <button class="btn-material primary">
-                            <span>
-                                agregar
-                            </span>
-                        </button>
-                        <button class="btn-material red">
-                            <span>
-                                cancelar
-                            </span>
-                        </button>
-    
-                    </div>
-                    </div>
-            
+                    </form>
+
+                </div>
             </div>
         </div>
-    </div>  
+    </div>
+</div>
 
 
 
 <!-- modal Update representante -->
-<div class="modal fade update_representate" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div class="modal fade update_representate" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">primer nombre</label>
+                        <input type="text" class="form-control">
                     </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        <div>
-                            <label for="">primer nombre</label>
-                            <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">Segundo nombre</label>
-                              <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">primer Apellido</label>
-                            <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">Segundo Apellido</label>
-                            <input type="text">
-                        </div>
-    
-                        <div>
-                            <label for="">Telefono</label>
-                            <input type="text">
-                        </div>
-    
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">Segundo nombre</label>
+                        <input type="text" class="form-control">
                     </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">primer Apellido</label>
+                        <input type="text" class="form-control">
                     </div>
-            
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">Segundo Apellido</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                        <label for="">Telefono</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    <!--para agregar el proveedor-->
-    <div class="modal fade add_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-            <div class="modal-dialog modal-lg">  
-                <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                        <div class="container">
-                            <div>
+</div>
+
+
+
+<!--para agregar el proveedor-->
+<div class="modal fade add_proveedor" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
                                 <label for="">nombre</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-        
-                            <div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
                                 <label for="">NIT</label>
-                                <input type="text" name="" id="">
+                                <input type="text" class="form-control" name="" id="">
                             </div>
-                            <div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
                                 <label for="">Direccion</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-                            <div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
                                 <label for="">representante</label>
-                                <select name="" id="">
+                                <select name="" id="" class="form-control">
                                     <option value="">seleccione</option>
                                     <option value="">seleccione</option>
                                     <option value="">seleccione</option>
@@ -390,104 +332,107 @@
                                     <option value="">seleccione</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
                                 <label for="">Descripcion</label>
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
-                            <div>
+                            <div class="col-sm-12 col-md-6 col-lg-12 form-group">
                                 <button class="btn btn-primary">
                                     agregar
                                 </button>
+
                             </div>
-        
                         </div>
-                        </div>
-                
+                    </form>
                 </div>
             </div>
+        </div>
+    </div>
 </div>
 
 <!--update representante-->
-<div class="modal fade update_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modificar Proveedor</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        <div>
-                            <label for="">nombre</label>
-                            <input type="text">
+<div class="modal fade update_proveedor" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar Proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">NIT</label>
+                                <input type="text" class="form-control" name="" id="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">Direccion</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">representante</label>
+                                <select class="form-control" name="" id="">
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                    <option value="">seleccione</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">Descripcion</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-12">
+                                <button class="btn btn-success">
+                                    Actualizar
+                                </button>
+                            </div>
                         </div>
-    
-                        <div>
-                            <label for="">NIT</label>
-                            <input type="text" name="" id="">
-                        </div>
-                        <div>
-                            <label for="">Direccion</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label for="">representante</label>
-                            <select name="" id="">
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                                <option value="">seleccione</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="">Descripcion</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <button class="btn btn-success">
-                                Actualizar
-                            </button>
-                        </div>
-    
-                    </div>
-                    </div>
-            
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
 </div>
 
 
 <!--Eliminar proveedor-->
-<div class="modal fade delete_proveedor" tabindex="-1"  aria-labelledby="myLargeModalLabel" aria-hidden="true">    
-        <div class="modal-dialog modal-lg">  
-            <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Eliminar Proveedor</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="container">
-                        <div>
-                            <label for="">nombre</label>
-                            <input type="text">
+<div class="modal fade delete_proveedor" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Proveedor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 form-group">
+                                <label for="">nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-12">
+                                <button class="btn btn-danger">
+                                    eliminar
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-danger">
-                                eliminar
-                            </button>
-                        </div>
-    
-      
-    
-                    </div>
-                    </div>
-            
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
 </div>

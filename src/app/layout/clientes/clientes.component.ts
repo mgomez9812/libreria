@@ -11,10 +11,6 @@ export class ClientesComponent implements OnInit {
 
   constructor() {
     /*para marca*/ 
-    $(document).ready(function() {
-      $('#load_client').DataTable( {
-      } );
-    } );
 
    }
 

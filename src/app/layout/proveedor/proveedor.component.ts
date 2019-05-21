@@ -10,15 +10,6 @@ declare var $;
 export class ProveedorComponent implements OnInit {
 
   constructor() {
-    /*para marca*/ 
-    $(document).ready(function() {
-      $('#load_representante').DataTable( {
-      } );
-    } );
-
-    $(document).ready(function(){
-      $('#load_proveedor').DataTable({});
-    });
    }
 
    /** */
